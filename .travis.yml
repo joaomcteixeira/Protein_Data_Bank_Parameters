@@ -4,7 +4,6 @@ dist: bionic
 # safelist
 branches:
   only:
-    - master
     - latest
 
 matrix: 
@@ -109,7 +108,7 @@ matrix:
     - name: "Linux Python 2.7 TOXENV=py27,codecov,coveralls"
       os: linux
       python: 2.7
-      env: TOXENV=py27,codecov,coveralls
+      env: PY27=1,TOXENV=py27,codecov,coveralls
       before_install:
         - python -m pip install --upgrade pip wheel
 
@@ -173,7 +172,7 @@ matrix:
           packages: python
 
 install:
-  - pip3 install tox tox-venv
+  - if [[ $PY27 ]]; then pip install tox tox-venv; else pip3 install tox tox-venv; fi
   - tox --version
 
 script:
