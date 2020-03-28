@@ -4,4 +4,4 @@ from pdbparams import slices
 
 def test_true():
     """Just asserts True."""
-    assert True
+    assert slices
