@@ -15,7 +15,6 @@ exclude .codeclimate.yml
 exclude tox.ini
 exclude .travis.yml
 
-prune devtools
 prune tests
 
 global-exclude *.py[cod] __pycache__/* *.so *.dylib 

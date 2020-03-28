@@ -31,7 +31,7 @@ long_description = '{}\n{}'.format(
 setup(
     name='pdbparams',
     version='0.0.0',
-    description='A Python package hosting the static parameters for the Protein Data Bank file formats.' ,
+    description='A Python package hosting the static parameters for the Protein Data Bank file formats.',
     long_description=long_description,
     author='Joao Miguel Correia Teixeira',
     author_email='joaomcteixeira@gmail.com',
@@ -70,7 +70,7 @@ setup(
         'Structural Biology',
         'Biochemistry',
         ],
-    python_requires='2.7, 3.5, 3.6, 3.7, 3.8',
+    python_requires='>=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*, <4',
     install_requires=[],
     extras_require={},
     setup_requires=[],

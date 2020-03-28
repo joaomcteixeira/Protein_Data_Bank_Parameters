@@ -2,6 +2,5 @@ Source documentation
 ====================
 
 .. toctree::
-    :glob:
 
-    sampleproject*
+    slices

@@ -99,6 +99,20 @@ matrix:
       before_install:
         - python -m pip install --upgrade pip wheel
 
+    - name: "Linux Python 3.5 TOXENV=py35,codecov,coveralls"
+      os: linux
+      python: 3.5
+      env: TOXENV=py35,codecov,coveralls
+      before_install:
+        - python -m pip install --upgrade pip wheel
+
+    - name: "Linux Python 2.7 TOXENV=py27,codecov,coveralls"
+      os: linux
+      python: 2.7
+      env: TOXENV=py27,codecov,coveralls
+      before_install:
+        - python -m pip install --upgrade pip wheel
+
     - name: "OSX Default Python 3.7 TOXENV=check,radon"
       os: osx
       osx_image: xcode11.3
