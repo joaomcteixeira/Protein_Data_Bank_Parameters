@@ -108,7 +108,7 @@ matrix:
     - name: "Linux Python 2.7 TOXENV=py27,codecov,coveralls"
       os: linux
       python: 2.7
-      env: USEPY27=1,TOXENV=py27,codecov,coveralls
+      env: TOXENV=py27,codecov,coveralls
       before_install:
         - python -m pip install --upgrade pip wheel
 
@@ -172,11 +172,11 @@ matrix:
           packages: python
 
 install:
-  - if [[ $USEPY27 ]]; then pip install tox tox-venv; else pip3 install tox tox-venv; fi
+  - if [[ $TOXENV == 'py27' ]]; then pip install tox tox-venv; else pip3 install tox tox-venv; fi
   - tox --version
 
 script:
-  - tox -v
+  - tox -e $TOXENV
 
 after_failure:
   - more .tox/log/* | cat
