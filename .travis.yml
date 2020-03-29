@@ -175,7 +175,7 @@ matrix:
 
 install:
   - echo $TOXENV
-  - if [[ $USEPY27 ]]; then pip install tox tox-venv; else pip3 install tox tox-venv; fi
+  - if [[ $USEPY27 ]]; then pip install tox; else pip3 install tox tox-venv; fi
   - tox --version
 
 script:
