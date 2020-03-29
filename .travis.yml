@@ -172,6 +172,7 @@ matrix:
           packages: python
 
 install:
+  - echo $TOXENV
   - if [[ $TOXENV == 'py27' ]]; then pip install tox tox-venv; else pip3 install tox tox-venv; fi
   - tox --version
 
